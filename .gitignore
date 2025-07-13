@@ -1,9 +1,29 @@
+# Minecraft Server Data
+data/
+plugins/*/
+!plugins/.gitkeep
+config/floodgate_key.pem
+
 # Docker volumes and persistent data
-volumes/database/
-volumes/panel/var/log/
-volumes/panel/nginx/logs/
-volumes/panel/nginx/ssl/
-volumes/wings/
+volumes/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Minecraft server files
+eula.txt
+banned-*.json
+ops.json
+usercache.json
+usernamecache.json
+whitelist.json
+world/
+world_nether/
+world_the_end/
+crash-reports/
+logs/
 
 # Temporary and test files
 cookies.txt
@@ -16,10 +36,6 @@ cookies.txt
 *.key
 *.crt
 *.cert
-
-# Environment files (if any)
-.env.local
-.env.production
 
 # OS generated files
 .DS_Store
