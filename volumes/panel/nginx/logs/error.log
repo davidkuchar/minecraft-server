@@ -1,4 +1,0 @@
-2025/07/12 21:06:10 [emerg] 21#21: unexpected end of file, expecting ";" or "}" in /etc/nginx/nginx.conf:68
-2025/07/12 21:06:11 [emerg] 27#27: unexpected end of file, expecting ";" or "}" in /etc/nginx/nginx.conf:68
-2025/07/12 21:06:13 [emerg] 28#28: unexpected end of file, expecting ";" or "}" in /etc/nginx/nginx.conf:68
-2025/07/12 21:06:16 [emerg] 29#29: unexpected end of file, expecting ";" or "}" in /etc/nginx/nginx.conf:68
