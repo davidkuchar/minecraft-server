@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft-server
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "LATEST"
+      MEMORY: "2G"
+      DIFFICULTY: "easy"
+      MAX_PLAYERS: "10"
+      MOTD: "PaperMC Server with GeyserMC"
+      ENABLE_WHITELIST: "false"
+      ONLINE_MODE: "false"  # Required for GeyserMC
+      SPAWN_PROTECTION: "0"
+      VIEW_DISTANCE: "10"
+      SIMULATION_DISTANCE: "10"
+      # GeyserMC setup
+      PLUGINS: |
+        https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot
+        https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+    ports:
+      - "25565:25565"  # Java Edition
+      - "19132:19132/udp"  # Bedrock Edition
+    volumes:
+      - ./data:/data
+      - ./plugins:/data/plugins
+      - ./config:/data/config
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
